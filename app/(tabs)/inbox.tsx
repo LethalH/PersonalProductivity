@@ -1016,41 +1016,9 @@ export default function InboxScreen() {
             {bottomTab === 'favourite' ? (
               <View key={refreshKey}>
                 {getFavouriteItems().length > 0 ? (
-                  getFavouriteItems().map(item => {
-                    const itemData = getItemForCompletion(item.id);
-                    const handleCompletion = () => {
-                      if (itemData?.type === 'inbox') {
-                        toggleItemCompletion(item.id);
-                      } else if (itemData?.type === 'project') {
-                        toggleProjectCompletion(item.id);
-                      } else if (itemData?.type === 'nextAction') {
-                        toggleNextActionCompletion(item.id);
-                      }
-                    };
-                    const handleLongPressAction = () => {
-                      if (itemData?.type === 'inbox') {
-                        handleLongPress('inbox', item.id);
-                      } else if (itemData?.type === 'project') {
-                        handleLongPress('project', item.id);
-                      } else if (itemData?.type === 'nextAction') {
-                        handleLongPress('nextAction', item.id);
-                      }
-                    };
-                    return (
-                      <TouchableOpacity
-                        key={item.id}
-                        style={styles.bottomItem}
-                        onLongPress={handleLongPressAction}
-                        delayLongPress={300}
-                      >
-                        <View style={styles.itemContent}>
-                          <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-                            {renderGenericItem({ item })}
-                          </View>
-                        </View>
-                      </TouchableOpacity>
-                    );
-                  })
+                  getFavouriteItems().map(item =>
+                    renderGenericItem({ item: { ...item, type: 'projects' } })
+                  )
                 ) : (
                   <Text style={styles.emptyText}>No favourite items</Text>
                 )}
@@ -1067,41 +1035,9 @@ export default function InboxScreen() {
                 )}
                 {isHiddenUnlocked ? (
                   getHiddenItems().length > 0 ? (
-                    getHiddenItems().map(item => {
-                      const itemData = getItemForCompletion(item.id);
-                      const handleCompletion = () => {
-                        if (itemData?.type === 'inbox') {
-                          toggleItemCompletion(item.id);
-                        } else if (itemData?.type === 'project') {
-                          toggleProjectCompletion(item.id);
-                        } else if (itemData?.type === 'nextAction') {
-                          toggleNextActionCompletion(item.id);
-                        }
-                      };
-                      const handleLongPressAction = () => {
-                        if (itemData?.type === 'inbox') {
-                          handleLongPress('inbox', item.id);
-                        } else if (itemData?.type === 'project') {
-                          handleLongPress('project', item.id);
-                        } else if (itemData?.type === 'nextAction') {
-                          handleLongPress('nextAction', item.id);
-                        }
-                      };
-                      return (
-                        <TouchableOpacity
-                          key={item.id}
-                          style={styles.bottomItem}
-                          onLongPress={handleLongPressAction}
-                          delayLongPress={300}
-                        >
-                          <View style={styles.itemContent}>
-                            <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-                              {renderGenericItem({ item })}
-                            </View>
-                          </View>
-                        </TouchableOpacity>
-                      );
-                    })
+                    getHiddenItems().map(item =>
+                      renderGenericItem({ item })
+                    )
                   ) : (
                     <Text style={styles.emptyText}>No hidden items</Text>
                   )

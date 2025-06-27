@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "PersonalProductivity",
-    "slug": "PersonalProductivity",
+    "slug": "personalproductivity",
+    "owner": "leharshverma",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,10 +14,11 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/notebook.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.leharshverma.personalproductivity"
     },
     "web": {
       "bundler": "metro",
@@ -41,7 +43,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "2eff552b-1cd8-4332-ac84-247e0e792f1e"
+        "projectId": "38bd3dca-7f57-4c39-8fcb-333607331600"
       }
     }
   }
