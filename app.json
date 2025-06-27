@@ -2,7 +2,7 @@
   "expo": {
     "name": "PersonalProductivity",
     "slug": "personalproductivity",
-    "owner": "leharshverma",
+    "owner": "harshverma2004",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -43,7 +43,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "38bd3dca-7f57-4c39-8fcb-333607331600"
+        "projectId": "f7b3afaa-641c-4c49-908e-804a06da78e1"
       }
     },
     "runtimeVersion": {
