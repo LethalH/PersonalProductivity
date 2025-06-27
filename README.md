@@ -1,5 +1,7 @@
 # PersonalProductivity
 
+![Demo Video](assets/Demo.mp4)
+
 ## Requirements
 - [Visual Studio Code](https://code.visualstudio.com/) (recommended)
   - Extensions:
@@ -35,6 +37,6 @@ Welcome! This is a productivity app built with Expo (React Native).
 
 Enjoy being productive! ~ HARSH VERMA
 
-![Demo](assets/Demo.mp4)
+
 
 
