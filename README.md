@@ -34,3 +34,7 @@ Welcome! This is a productivity app built with Expo (React Native).
   ```
 
 Enjoy being productive! ~ HARSH VERMA
+
+![Demo](assets/Demo.mp4)
+
+
